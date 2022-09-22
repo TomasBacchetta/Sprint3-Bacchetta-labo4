@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Sprint2": {
+    "Sprint3": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sprint2",
+            "outputPath": "dist/Sprint3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Sprint2:build:production"
+              "browserTarget": "Sprint3:build:production"
             },
             "development": {
-              "browserTarget": "Sprint2:build:development"
+              "browserTarget": "Sprint3:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Sprint2:build"
+            "browserTarget": "Sprint3:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "Sprint2:build:production",
+            "browserTarget": "Sprint3:build:production",
             "firebaseProject": "sprint3-bacchetta-labo4",
             "firebaseHostingSite": "sprint3-bacchetta-labo4"
           }
