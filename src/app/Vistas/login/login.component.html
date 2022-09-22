@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Signin Template · Bootstrap v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+
+
+    
+    <!-- Custom styles for this template -->
+    <link href="login.component.scss" rel="stylesheet">
+  </head>
+  <body class="text-center">
+
+    <div id="cover-spin" *ngIf = "this.spinnerOn"></div>
+
+    <main class="form-signin">
+  <form>
+    <img class="mb-4" src="..\assets\felix-nav.png" alt="" width="150" height="150">
+
+    <h1 class="h3 mb-3 fw-normal" style = "color:#000000">Por favor, inicie sesión</h1>
+
+    <div class="form-floating">
+      <input type="email" name = "botonMail" class="form-control" id="floatingInput" placeholder="mail@ejemplo.com" [(ngModel)] = "this.usuario.correo">
+      
+      <div class = "boxError">
+        <label class = "lblError" *ngIf = "this.errorCorreo" >Usuario incorrecto</label>
+      </div>
+      
+      
+    </div>
+    <div class="form-floating">
+      <input type="password" name = "botonCorreo" class="form-control" id="floatingPassword" placeholder="clave" [(ngModel)] = "this.usuario.clave">
+      <div class = "boxError">
+        <label  *ngIf ="this.errorClave" >Clave incorrecta</label>
+      </div>
+      
+      
+    </div>
+
+    
+    <button class="w-100 btn btn-lg btn-primary" type="submit" (click) = "loguearse()">Iniciar sesión</button>
+    <br>
+    <br>
+    <h1 class="h3 mb-3 fw-normal" style = "color:#000000">¿Es nuevo? ¡Regístrese!</h1>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit" routerLink="registro" >Registrarse</button>
+  </form>
+</main>
+
+
+    
+  </body>
+</html>

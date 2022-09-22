@@ -1,0 +1,20 @@
+<head>
+    <link rel="stylesheet" href="chat.component.scss">
+</head>
+
+<body>
+
+    <div id="cover-spin" *ngIf = "this.spinner"></div>
+
+
+    <div class ="ventana-chat">
+    <app-mensaje *ngFor = "let mensaje of mensajes" [mensaje] = "mensaje"></app-mensaje>
+    
+    
+        
+    </div>
+    <input type = "text" placeholder = "{{!this.error ? 'Ingrese mensaje' : 'TEXTO INVÁLIDO'}}" [(ngModel)] = "this.mensajeAEnviar">
+    <button (click) = "enviarMensaje()">Enviar</button>
+
+</body>
+

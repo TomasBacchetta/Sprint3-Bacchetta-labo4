@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel ="stylesheet" href = "ahorcado.component.scss">
+
+</head>
+<body>
+    <div class="alerta" *ngIf = "this.alertaVictoria">
+        
+        <div class = "container-alerta">
+            <h3>Félix se ha salvado</h3>
+        <img class = "imagen-ahorcado" src = "../../../../assets/juegos/ahorcado/logo.jpg">
+        <h3>La palabra era: {{this.palabraReal}}</h3>
+        <a class = "btn btn-primary btn-lg" (click)="refresh()">Volver a jugar</a>
+        <a class = "btn btn-primary btn-lg" routerLink = "/home">Salir</a>
+        </div>
+    </div>
+
+    <div class="alerta" *ngIf = "this.alertaDerrota">
+        <div class = "container-alerta">
+            <h3>Félix ha muerto</h3>
+            <img class = "imagen-ahorcado" src = "../../../../assets/juegos/ahorcado/7.jpg">
+            <h3>La palabra era: {{this.palabraReal}}</h3>
+            <a class = "btn btn-primary btn-lg" (click)="refresh()">Volver a jugar</a>
+            <a class = "btn btn-primary btn-lg" routerLink = "/home">Salir</a>
+        </div>
+        
+        
+        
+    </div>
+
+<div class ="Fila" *ngIf = "!this.alertaVictoria && !this.alertaDerrota">
+    
+        <img class = "imagen-ahorcado" src = '{{ "../../../../assets/juegos/ahorcado/" + this.contador + ".jpg" }}'>
+        <label>{{this.descripcion}}</label>
+        <div class="grid-container2">
+            <a *ngFor = "let caracter of palabraEnDisplay">{{caracter}}</a>
+            
+        </div>
+
+
+
+    <div class="grid-container">
+    <div class="cuadroBotones" *ngFor = "let letra of letras">
+        <a [ngClass]="this.estadoBotones.get(letra) ? 'btn btn-primary btn-lg' : 'btn btn-primary btn-lg disabled'" role="button" (click) = "asignarLetra(letra)">{{letra}}</a>
+    </div>
+    
+    </div>
+    
+</div>
+
+</body>
+</html>
+

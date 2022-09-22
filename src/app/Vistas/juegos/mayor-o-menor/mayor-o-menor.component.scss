@@ -1,0 +1,53 @@
+
+.imagen-carta{
+    width: 50;
+    height: 100px;
+}
+
+.item1 { grid-area: header; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main right right right'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.alerta {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.5);
+    z-index:9999;
+    margin: auto;
+    text-align: center;
+    align-items : center;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+
+}
+
+.container-alerta{
+    background-color: white;
+    
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #29c68c !important;
+    border-color: #20d190 !important;
+}

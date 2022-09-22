@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sprint3-bacchetta-labo4": {
+      "hosting": {
+        "Sprint2": [
+          "sprint3-bacchetta-labo4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sprint3-bacchetta-labo4"
+  }
+}

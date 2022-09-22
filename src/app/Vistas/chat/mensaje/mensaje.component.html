@@ -1,0 +1,7 @@
+<head>
+    <link rel="stylesheet" href="mensaje.component.scss">
+</head>
+<body> 
+    <p [ngClass] = "esUsuarioLogueado ? 'mensajePropio' : 'mensajeAjeno'">{{esUsuarioLogueado ? 'Yo' : this.mensaje.usuario }}&nbsp;~&nbsp;{{fechaUnixToDate(this.mensaje.fecha)}}&nbsp;&nbsp;&nbsp;&nbsp;{{this.mensaje.mensaje}}
+</body>
+

@@ -42,8 +42,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "10kb"
                 }
               ],
               "fileReplacements": [
@@ -100,8 +100,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Sprint2:build:production",
+            "firebaseProject": "sprint3-bacchetta-labo4",
+            "firebaseHostingSite": "sprint3-bacchetta-labo4"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0b02bb52-7816-4054-97ca-892c6badee07"
   }
 }

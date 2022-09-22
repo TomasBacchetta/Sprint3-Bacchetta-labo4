@@ -1,0 +1,50 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" href="mayor-o-menor.component.scss">
+</head>
+<body>
+
+
+
+    <h1>Haga su apuesta:</h1>
+
+<div class="grid-container" *ngIf = "this.cartas.length > 0">
+  <div class="item1">
+    <img class = "imagen-carta" src = "../../../../assets/juegos/mayorMenor/cartas/dorso.png" *ngIf = "this.cartas.length > 0">
+    <img class = "imagen-carta" src = {{this.pathFinal}}>
+    <label>{{this.cartas.length}}/50</label>
+  </div>
+  <div class="item3">
+    <a class="btn btn-primary btn-lg" role="button" (click) = "tomarCarta('mayor')" >Mayor</a>
+  </div>  
+  <div class="item4">
+    <a class="btn btn-primary btn-lg" role="button" (click) = "tomarCarta('menor')" >Menor</a>
+  </div>
+  <div class="item5">
+    <h3>Puntaje: {{this.puntaje}}</h3>
+  </div>
+</div>
+
+
+<div class="alerta" *ngIf = "this.cartas.length == 0">
+    <div class = "container-alerta">
+        <h3>Juego finalizado</h3>
+        <h3>La última carta era:</h3>
+        <img class = "imagen-carta" src = {{this.pathFinal}}>
+        <h3>Puntaje: {{this.puntaje}}</h3>
+        <a class = "btn btn-primary btn-lg" (click)="refresh()">Volver a jugar</a>
+        <a class = "btn btn-primary btn-lg" routerLink = "/home">Salir</a>
+    </div>
+    
+    
+    
+</div>
+</body>
+</html>
+
+
